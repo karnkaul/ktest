@@ -25,8 +25,8 @@ struct TestCase {
 auto run_tests() -> int;
 } // namespace ktest
 
-#define ASSERT(pred) ktest::check_assert(pred, #pred, __FILE__, __LINE__) // NOLINT(cppcoreguidelines-macro-usage)
-#define EXPECT(pred) ktest::check_expect(pred, #pred, __FILE__, __LINE__) // NOLINT(cppcoreguidelines-macro-usage)
+#define ASSERT(pred) ktest::check_assert((pred), #pred, __FILE__, __LINE__) // NOLINT(cppcoreguidelines-macro-usage)
+#define EXPECT(pred) ktest::check_expect((pred), #pred, __FILE__, __LINE__) // NOLINT(cppcoreguidelines-macro-usage)
 
 // NOLINTNEXTLINE(cppcoreguidelines-macro-usage)
 #define TEST(name)                                                                                                                                             \
